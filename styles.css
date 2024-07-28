@@ -22,89 +22,99 @@ body, html {
     align-items: center;
     text-align: center;
     color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.6.5), rgba(0, 0, 0, 0.6.5)), url('https://images.unsplash.com/photo-1600718800089-353dc75b7bfd?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/random/1920x1080/?storage,warehouse') no-repeat center center;
     background-size: cover;
     padding: 1rem;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5),
-                 3px 3px 6px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8),
+                 3px 3px 6px rgba(0,0,0,0.6);
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 2rem;
     max-width: 800px;
     line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 
 .btn-container {
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 1rem;
 }
 
 .btn {
     display: inline-block;
-    width: 80%; /* Reduce width, you can adjust this value */
-    max-width: 300px; /* Set a maximum width */
-    margin: 10px auto; /* Center the buttons and add vertical space */
-    padding: 15px 20px; /* Increase padding */
-    font-size: 18px; /* Slightly larger font */
-    text-align: center;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
     text-decoration: none;
     color: white;
-    background-color: rgba(255, 255, 255, 0.2); /* Increase opacity */
+    background-color: rgba(255, 255, 255, 0.2);
     border: 2px solid white;
     border-radius: 5px;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-.btn:hover, .btn:focus {
-    background-color: rgba(255, 255, 255, 0.3);
+.btn:hover {
+    background-color: white;
+    color: black;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 .btn i {
-    margin-right: 10px;
-    vertical-align: middle;
+    margin-right: 0.5rem;
 }
 
 .cta-text {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 600;
     margin-top: 1rem;
     color: var(--under-button-text-color);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5),
-                 3px 3px 6px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8),
+                 3px 3px 6px rgba(0,0,0,0.6);
 }
 
 @media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    .btn-container {
+        flex-direction: column;
+    }
+    .btn {
+        width: 80%;
+        max-width: 300px;
+        margin: 0.5rem auto;
+    }
+    .cta-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
     h1 {
         font-size: 2rem;
     }
     p {
         font-size: 1rem;
     }
-    .btn-container {
-        flex-direction: column;
+    .btn {
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
     }
     .cta-text {
         font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .btn {
-        font-size: 16px;
-        padding: 12px 15px;
-        width: 90%; /* Slightly wider on very small screens */
     }
 }
